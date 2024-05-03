@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Qg-8J-Urv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="musicAlbum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="WoV-Zh-kdq">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="different_class" translatesAutoresizingMaskIntoConstraints="NO" id="0py-YY-nUw">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="316"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbF-40-qZ8">
+                                        <rect key="frame" x="0.0" y="326.66666666666669" width="393" height="34.333333333333314"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Different Class">
+                                            <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="DCt-bG-1AM" kind="show" id="dBQ-vB-vFT"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countdown" translatesAutoresizingMaskIntoConstraints="NO" id="T1n-zQ-Yp8">
+                                        <rect key="frame" x="0.0" y="372" width="393" height="298"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-lv-izG">
+                                        <rect key="frame" x="0.0" y="680.66666666666663" width="393" height="34.333333333333371"/>
+                                        <color key="tintColor" systemColor="systemIndigoColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Countdown 1992–1983"/>
+                                        <connections>
+                                            <segue destination="UxY-Z2-qj8" kind="show" id="6YV-3Q-hSA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WoV-Zh-kdq" secondAttribute="bottom" id="fyB-qk-92H"/>
+                            <constraint firstItem="WoV-Zh-kdq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hAU-KJ-jay"/>
+                            <constraint firstItem="WoV-Zh-kdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n0V-gc-5eA"/>
+                            <constraint firstItem="vbF-40-qZ8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="vf1-DD-oU8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WoV-Zh-kdq" secondAttribute="trailing" id="wD9-t5-1dg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QFx-5s-Dwx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="635-4P-Gc0">
+            <objects>
+                <viewController id="DCt-bG-1AM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8z5-q0-d03">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CJj-Ul-xJT">
+                                <rect key="frame" x="38.666666666666657" y="127.66666666666669" width="316" height="596.66666666666652"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="different_class" translatesAutoresizingMaskIntoConstraints="NO" id="3qc-Ax-1PP">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="241"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Different Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lb4-ql-p7G">
+                                        <rect key="frame" x="0.0" y="241.00000000000003" width="316" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAN-4t-RSf">
+                                        <rect key="frame" x="0.0" y="273.33333333333331" width="316" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ORd-Qi-UQt">
+                                        <rect key="frame" x="0.0" y="323.33333333333337" width="316" height="273.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">1. Mis-Shapes (3:46)
+2. Pencil Skirt (3:11)
+3. Common People (5:50)
+4. I Spy (5:55)
+5. Disco 2000 (4:33)
+6. Live Bed Show (3:29)
+7. Something Changed (3:18)
+8. Sorted for E's &amp; Wizz (3:47)
+9. F.E.E.L.I.N.G.C.A.L.L.E.D.L.O.V.E (6:01)
+10. Underwear (4:06)
+11. Monday Morning (4:16)
+12. Bar Italia (3:42)</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nAN-4t-RSf" firstAttribute="centerX" secondItem="CJj-Ul-xJT" secondAttribute="centerX" id="46Q-Hr-F77"/>
+                                    <constraint firstItem="nAN-4t-RSf" firstAttribute="centerY" secondItem="CJj-Ul-xJT" secondAttribute="centerY" id="VAa-yU-zdC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MLu-eA-xDf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CJj-Ul-xJT" firstAttribute="centerY" secondItem="8z5-q0-d03" secondAttribute="centerY" id="0cJ-z0-pkf"/>
+                            <constraint firstItem="CJj-Ul-xJT" firstAttribute="centerX" secondItem="8z5-q0-d03" secondAttribute="centerX" id="Cil-67-J5a"/>
+                            <constraint firstItem="CJj-Ul-xJT" firstAttribute="height" secondItem="8z5-q0-d03" secondAttribute="height" multiplier="0.7" id="hFS-mE-yuW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AOI-Hu-u6h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4b-82-Wop" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gvk-qe-c5L">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHV-RO-iSY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="5Qg-8J-Urv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LH1-GJ-w3w">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xz1-0M-BIB"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-947" y="-2"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VhC-sY-cRI">
+            <objects>
+                <viewController id="UxY-Z2-qj8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g78-OP-8ES">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eoP-F0-6fd">
+                                <rect key="frame" x="38.666666666666657" y="127.66666666666669" width="316" height="596.66666666666652"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="countdown" translatesAutoresizingMaskIntoConstraints="NO" id="W1d-42-H39">
+                                        <rect key="frame" x="0.0" y="0.0" width="316" height="241"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Countdown 1992–1983" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyJ-lL-NYu">
+                                        <rect key="frame" x="0.0" y="241.00000000000003" width="316" height="32.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-0r-hEG">
+                                        <rect key="frame" x="0.0" y="273.33333333333331" width="316" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JXF-Sa-MPs">
+                                        <rect key="frame" x="0.0" y="323.33333333333337" width="316" height="273.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Countdown (4:40)
+Death Goes to the Disco (5:42)
+My Legendary Girlfriend (6:44)
+Don't You Want Me Anymore? (3:46)
+She's Dead (5:04)
+Down by the River (3:38)
+I Want You (4:38)
+Being Followed Home (6:01)
+Master of the Universe (3:19)
+Don't You Know (4:06)
+They Suffocate at Night (6:17)</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J2g-0r-hEG" firstAttribute="centerY" secondItem="eoP-F0-6fd" secondAttribute="centerY" id="N2z-wv-V3J"/>
+                                    <constraint firstItem="J2g-0r-hEG" firstAttribute="centerX" secondItem="eoP-F0-6fd" secondAttribute="centerX" id="NiD-0S-kkK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KX7-OE-TsV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eoP-F0-6fd" firstAttribute="centerY" secondItem="g78-OP-8ES" secondAttribute="centerY" id="Ke5-J1-dcz"/>
+                            <constraint firstItem="eoP-F0-6fd" firstAttribute="height" secondItem="g78-OP-8ES" secondAttribute="height" multiplier="0.7" id="Zb4-cf-I4J"/>
+                            <constraint firstItem="eoP-F0-6fd" firstAttribute="centerX" secondItem="g78-OP-8ES" secondAttribute="centerX" id="gsA-lf-o1W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="to1-mZ-EK3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nE5-Z6-RQ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917" y="711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="countdown" width="293" height="298"/>
+        <image name="different_class" width="316" height="316"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

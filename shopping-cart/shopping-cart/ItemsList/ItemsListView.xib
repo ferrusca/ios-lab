@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemsListViewController" customModule="shopping_cart" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="dsG-3f-y92" id="zsa-Lo-cqa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dsG-3f-y92">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wua-Fh-FtQ">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="rw2-U5-PUb">
+                            <rect key="frame" x="59" y="0.0" width="275" height="684"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFT-ex-Mgt">
+                                    <rect key="frame" x="0.0" y="0.0" width="275" height="34.333333333333336"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Wine" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="MQa-xw-6DB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPX-5O-VDF">
+                                    <rect key="frame" x="0.0" y="72.333333333333343" width="275" height="34.333333333333343"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="water" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="dLr-kb-a0i"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDT-yA-AjW">
+                                    <rect key="frame" x="0.0" y="144.33333333333334" width="275" height="34.333333333333343"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="carrot" catalog="system" title="Carrot" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="chc-zH-ACR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78R-uE-Oin">
+                                    <rect key="frame" x="0.0" y="216.66666666666669" width="275" height="34.333333333333343"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Pizza" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="aje-Oe-U4e"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-o0-75F">
+                                    <rect key="frame" x="0.0" y="288.66666666666669" width="275" height="34.333333333333314"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Milk" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="HH3-GI-sll"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qny-wr-hEF">
+                                    <rect key="frame" x="0.0" y="361" width="275" height="34.333333333333314"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Beer" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="gYX-4q-Ys1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv8-vy-ZB1">
+                                    <rect key="frame" x="0.0" y="433" width="275" height="34.333333333333314"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Juice" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="j6Z-SK-yTQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IpX-Rm-2Uk">
+                                    <rect key="frame" x="0.0" y="505.33333333333331" width="275" height="34.333333333333314"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Meat" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="GNk-sg-uui"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWd-xs-fxR">
+                                    <rect key="frame" x="0.0" y="577.33333333333337" width="275" height="34.333333333333371"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Beans" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="nkA-Do-OSa"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11e-A7-ngd">
+                                    <rect key="frame" x="0.0" y="649.66666666666663" width="275" height="34.333333333333371"/>
+                                    <color key="backgroundColor" name="AccentColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" title="Mayo" cornerStyle="capsule"/>
+                                    <connections>
+                                        <action selector="toggleProductWithSender:" destination="-1" eventType="touchUpInside" id="Na5-Dc-naa"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="rw2-U5-PUb" firstAttribute="width" secondItem="Wua-Fh-FtQ" secondAttribute="width" multiplier="0.7" id="42K-Qs-Cah"/>
+                        <constraint firstAttribute="bottom" secondItem="rw2-U5-PUb" secondAttribute="bottom" constant="75" id="9Uh-j4-VSC"/>
+                        <constraint firstItem="rw2-U5-PUb" firstAttribute="centerX" secondItem="Wua-Fh-FtQ" secondAttribute="centerX" id="WCJ-0i-RVK"/>
+                        <constraint firstItem="rw2-U5-PUb" firstAttribute="top" secondItem="Wua-Fh-FtQ" secondAttribute="top" id="b2S-Yl-tBn"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCr-Bm-EVA">
+                    <rect key="frame" x="39.333333333333343" y="757.33333333333337" width="314.33333333333326" height="60.666666666666629"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Let's Go Shopping" cornerStyle="capsule">
+                        <backgroundConfiguration key="background">
+                            <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        </backgroundConfiguration>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="goToCartUsingXIB" destination="-1" eventType="touchUpInside" id="sUs-QM-jTF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="cpk-CU-mVv"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YCr-Bm-EVA" firstAttribute="width" secondItem="Wua-Fh-FtQ" secondAttribute="width" multiplier="0.8" id="L4s-wM-wND"/>
+                <constraint firstItem="Wua-Fh-FtQ" firstAttribute="leading" secondItem="cpk-CU-mVv" secondAttribute="leading" id="ZLa-CA-gc5"/>
+                <constraint firstItem="YCr-Bm-EVA" firstAttribute="centerX" secondItem="dsG-3f-y92" secondAttribute="centerX" id="ZPN-YN-OBF"/>
+                <constraint firstItem="cpk-CU-mVv" firstAttribute="bottom" secondItem="Wua-Fh-FtQ" secondAttribute="bottom" id="iMr-Q3-PGk"/>
+                <constraint firstItem="YCr-Bm-EVA" firstAttribute="bottom" secondItem="Wua-Fh-FtQ" secondAttribute="bottom" id="pkx-0P-hul"/>
+                <constraint firstItem="Wua-Fh-FtQ" firstAttribute="top" secondItem="cpk-CU-mVv" secondAttribute="top" id="tVg-sB-R5r"/>
+                <constraint firstItem="YCr-Bm-EVA" firstAttribute="height" secondItem="Wua-Fh-FtQ" secondAttribute="height" multiplier="0.08" id="uBA-Ah-lFw"/>
+                <constraint firstItem="cpk-CU-mVv" firstAttribute="trailing" secondItem="Wua-Fh-FtQ" secondAttribute="trailing" id="zzd-w6-KoI"/>
+            </constraints>
+            <point key="canvasLocation" x="47" y="-124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="carrot" catalog="system" width="128" height="122"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
