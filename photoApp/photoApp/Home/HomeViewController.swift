@@ -8,14 +8,28 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var pictureTypeSwitch: UISwitch!
-    @IBOutlet weak var showCaptionSwitch: UISwitch!
-    @IBOutlet weak var customTextSwitch: UISwitch!
-    @IBOutlet weak var picsButton: UIButton!
-    @IBOutlet weak var customText: UITextView! {
-        didSet {
-            customText.delegate = self
-        }
+    // casting the view to our HomeView1 type
+    var customView: HomeView1 {
+        
+        return view as! HomeView1
+    }
+    
+    // These are not needed anymore since view was created programatically
+//    @IBOutlet weak var pictureTypeSwitch: UISwitch!
+//    @IBOutlet weak var showCaptionSwitch: UISwitch!
+//    @IBOutlet weak var customTextSwitch: UISwitch!
+//    @IBOutlet weak var picsButton: UIButton!
+//    @IBOutlet weak var customTextView: UITextView! {
+//        didSet {
+//            customText.delegate = self
+//        }
+//    }
+    
+    // This is equivalent to linking UI elements with @IBAction's
+    private func connectActionsWithHomeView() {
+        customView.pictureTypeSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
+        customView.picsButton.addTarget(self, action: #selector(picsClickPresentSegue(_:)), for: .touchUpInside)
+        customView.customTextSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
     }
     
     // since XIBs are only views, need to programatically add navigation bars and the items of ButtonItemGroup
@@ -29,14 +43,21 @@ class HomeViewController: UIViewController {
         self.navigationItem.centerItemGroups = [UIBarButtonItemGroup.fixedGroup(items: [infoButton, infoUsingXIBButton, logoutButton])]
     }
     
+    override func loadView() {
+        // instantiating the UIView manually created
+        view = HomeView1()
+    }
+    
     override func viewDidLoad() {
         setBarButtonItemGroup()
+        // linking button and switch actions
+        connectActionsWithHomeView()
     }
     
     
     @objc func manualSegueInfo() {
         // This is the same logic to pass the custom text
-        if customTextSwitch.isOn && customText.text?.isEmpty ?? true {
+        if customView.customTextSwitch.isOn && customView.customTextView.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Add a custom string!", message: nil, preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel) { _ in
                 print("Alert controller dismissed")
@@ -47,17 +68,18 @@ class HomeViewController: UIViewController {
             // Instantiating storyboard from "Main"
             guard let loremViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoremViewController") as? LoremViewController else { return }
             
-            if customTextSwitch.isOn {
-                loremViewController.loremText = customText.text
+            if customView.customTextSwitch.isOn {
+                loremViewController.loremText = customView.customTextView.text
             }
             
             present(loremViewController, animated: true)
         }
     }
     
+    // XIB no longer exists
     @objc func manualSegueInfoUsingXIB() {
         // This is the same logic to pass the custom text
-        if customTextSwitch.isOn && customText.text?.isEmpty ?? true {
+        if customView.customTextSwitch.isOn && customView.customTextView.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Add a custom string!", message: nil, preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "OK", style: .cancel) { _ in
                 print("Alert controller dismissed")
@@ -68,8 +90,8 @@ class HomeViewController: UIViewController {
             
             let loremViewController = LoremViewController(nibName: "LoremViewController", bundle: nil)
             
-            if customTextSwitch.isOn {
-                loremViewController.loremText = customText.text
+            if customView.customTextSwitch.isOn {
+                loremViewController.loremText = customView.customTextView.text
             }
             
             
@@ -79,33 +101,24 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func switchValueChanged(_ sender: UISwitch) {
+    // NOTE - was changed from @IBaction to @objc
+    @objc func switchValueChanged(_ sender: UISwitch) {
         // If "Custom text" switch changes (note: tag value was set manually)
+        print(sender)
         if sender.tag == 48 {
-            customText.isEditable = sender.isOn
-        } else if sender == pictureTypeSwitch {
-            picsButton.setImage(UIImage(systemName: sender.isOn ? "dog.fill" : "cat.fill"), for: .normal)
+            customView.customTextView.isEditable = sender.isOn
+        } else if sender == customView.pictureTypeSwitch {
+            customView.picsButton.setImage(UIImage(systemName: sender.isOn ? "dog.fill" : "cat.fill"), for: .normal)
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let picturesViewController = segue.destination as? PicturesViewController {
-            picturesViewController.pictureType = pictureTypeSwitch.isOn ? .dog : .cat
-            picturesViewController.showCaptions = showCaptionSwitch.isOn
-        }
-        
-        if let loremViewController = segue.destination as? LoremViewController, customTextSwitch.isOn {
-            loremViewController.loremText = customText.text
-        }
-    }
-    
-    @IBAction func picsClickPresentSegue(_ sender: UIButton) {
+    @objc func picsClickPresentSegue(_ sender: UIButton) {
         // can pass `nibName: nil` since PicturesView and PicturesViewController filenames match!
         let picturesViewController = PicturesViewController(nibName: nil, bundle: nil)
         
         // pass data to the controller
-        picturesViewController.pictureType = pictureTypeSwitch.isOn ? .dog : .cat
-        picturesViewController.showCaptions = showCaptionSwitch.isOn
+        picturesViewController.pictureType = customView.pictureTypeSwitch.isOn ? .dog : .cat
+        picturesViewController.showCaptions = customView.showCaptionSwitch.isOn
         
         // push due to horizontal navigation
         navigationController?.pushViewController(picturesViewController, animated: true)
@@ -119,9 +132,9 @@ class HomeViewController: UIViewController {
     
     // Listen for "Info" Bar button item to mannually open modal
     @IBAction func manuallyPerformInformationSegue(_ sender: UIBarButtonItem) {
-        if customTextSwitch.isOn {
+        if customView.customTextSwitch.isOn {
             // if no text or text is empty...
-            if customText.text?.isEmpty ?? true {
+            if customView.customTextView.text?.isEmpty ?? true {
                 // show an alert
                 let alertController = UIAlertController(title: "Add a custom string!", message: nil, preferredStyle: .alert)
                 

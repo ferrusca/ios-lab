@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoremViewController" customModule="photoApp" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoremViewController" customModule="photo_app_programmatic" customModuleProvider="target">
             <connections>
                 <outlet property="loremTextView" destination="fDL-eY-Lkq" id="xgT-hs-VAs"/>
                 <outlet property="view" destination="5YD-cP-DR6" id="W67-7C-fjp"/>

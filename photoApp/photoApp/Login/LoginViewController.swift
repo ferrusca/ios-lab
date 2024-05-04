@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
 
     
     // detects if segue has been tiggered
-    // Note: this doesn't work aanymore since now segue is triggered manually
+    // Note: this doesn't work anymore since now segue is triggered manually
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let homeNavigationController = segue.destination as? UINavigationController {
             if let username = usernameTextField.text, !username.isEmpty {
