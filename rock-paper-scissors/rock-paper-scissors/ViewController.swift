@@ -59,7 +59,6 @@ class ViewController: UIViewController {
         print(sender.value)
         rounds = Int(floor(sender.value * 10 / 2))
         roundsLabel.text = "Rounds: \(rounds)"
-//        startButton.isEnabled = rounds != 0 && nameTextInput.text.
     }
     
     @IBAction func gameSegue(_ sender: UIButton) {
