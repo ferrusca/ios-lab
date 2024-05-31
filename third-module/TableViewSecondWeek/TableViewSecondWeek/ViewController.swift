@@ -18,8 +18,7 @@ class ViewController: UIViewController {
     
     var countries = ["Ukraine", "Italy", "Argentina", "Spain", "Indonesia"]
     var results = [String]()
-    var isSearching = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource = self
@@ -67,9 +66,6 @@ extension ViewController: UITableViewDataSource {
 // Delegating SearchBar
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        let regex = NSRegularExpression(".*[\(searchText)].*")
-
-        isSearching = true
         
         results = countries.filter {
             print($0.lowercased().ranges(of: searchText.lowercased()))
