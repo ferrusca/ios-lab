@@ -15,7 +15,7 @@ class ShoppingViewController: UIViewController {
     
     // List of filtered products to display in the search list
     var results = [String]()
-    var cart = [String]()
+    var cart: [String] = []
     let productModel = ProductModel.shared
     
     private func addProductToCart(name: String) {
@@ -37,7 +37,6 @@ class ShoppingViewController: UIViewController {
         collectionView.dataSource = self
         // set collection view cell height
         collectionView.delegate = self
-        cart = []
         // register custom collection cell
         collectionView.register(UINib(nibName: "ItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ItemCollectionViewCell")
     }
