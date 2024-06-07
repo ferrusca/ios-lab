@@ -46,7 +46,7 @@ class PokemonTypeModel {
     private let pokemonTypeDamages: [PokemonTypeDamage] = [
         PokemonTypeDamage(
             name: PokemonType.Normal.rawValue,
-            imagePath: "ghost.png",
+            imagePath: "normal.png",
             doubleDamageDealt: [],
             doubleDamageReceived: [.Fighting],
             halfDamageDealt: [.Rock, .Steel],
@@ -226,9 +226,13 @@ class PokemonTypeModel {
         )
     ]
     
+    public func getPokemonTypes() -> [PokemonTypeDamage] {
+        return pokemonTypeDamages;
+    }
+    
     public func getPokemonType(index: Int) -> PokemonTypeDamage {
         return pokemonTypeDamages[index]
     }
     
-    private init() {}
+    public init() {}
 }

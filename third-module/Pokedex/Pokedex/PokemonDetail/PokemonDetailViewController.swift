@@ -11,6 +11,12 @@ class PokemonDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var chainedTableView: UITableView!
     @IBOutlet weak var starImageView: UIImageView!
+    @IBOutlet weak var number: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var pokemonDescription: UITextView!
+    
+    
+    
     @objc func toggleFavorite(tapGestureRecognizer: UITapGestureRecognizer) {
         starImageView.isHighlighted = !starImageView.isHighlighted
         starImageView.isHighlighted ? pokemonModel.addToFavorites(pokemon: pokemon) : pokemonModel.removeFromFavorites(pokemon: pokemon)
@@ -33,6 +39,9 @@ class PokemonDetailViewController: UIViewController {
         chainedTableView.delegate = self
         initializeFavoriteIcon(pokemon: pokemon)
         initializeFavoriteIconGestureRecognizer()
+        name.text = pokemon.name
+        number.text = "#\(pokemon.number)"
+        pokemonDescription.text = pokemon.pokedexInfo
     }
     
     private func initializeFavoriteIconGestureRecognizer() {

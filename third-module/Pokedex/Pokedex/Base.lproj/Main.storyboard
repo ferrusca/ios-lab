@@ -16,25 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" enabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu3-ja-i9v">
-                                <rect key="frame" x="6" y="241" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                <offsetWrapper key="searchFieldBackgroundPositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="dhw-Vo-R1O" id="Z1g-uX-pSM"/>
-                                </connections>
-                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header-mini" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-TI-ksB">
+                                <rect key="frame" x="0.0" y="83" width="411" height="80"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHZ-Hx-o4A">
+                                <rect key="frame" x="0.0" y="179" width="393" height="590"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jJU-P0-qaV">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWl-wR-8rf">
+                                <rect key="frame" x="30" y="100" width="82" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="afU-xf-T3s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="afU-xf-T3s" firstAttribute="trailing" secondItem="ZHZ-Hx-o4A" secondAttribute="trailing" id="1MC-dD-xcS"/>
+                            <constraint firstItem="afU-xf-T3s" firstAttribute="bottom" secondItem="ZHZ-Hx-o4A" secondAttribute="bottom" id="2kt-lI-RVT"/>
+                            <constraint firstItem="7yX-TI-ksB" firstAttribute="trailing" secondItem="afU-xf-T3s" secondAttribute="trailing" constant="18" id="YZz-rw-UJC"/>
+                            <constraint firstItem="ZHZ-Hx-o4A" firstAttribute="leading" secondItem="afU-xf-T3s" secondAttribute="leading" id="dDc-y0-ZPW"/>
+                            <constraint firstItem="ZHZ-Hx-o4A" firstAttribute="top" secondItem="7yX-TI-ksB" secondAttribute="bottom" constant="16" id="nRu-bl-bV7"/>
+                            <constraint firstItem="7yX-TI-ksB" firstAttribute="leading" secondItem="afU-xf-T3s" secondAttribute="leading" id="sz6-b4-N5z"/>
+                            <constraint firstItem="afU-xf-T3s" firstAttribute="top" secondItem="7yX-TI-ksB" secondAttribute="top" constant="20" id="vfV-hx-umA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aEr-jI-ete"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZHZ-Hx-o4A" id="pj3-Lp-F7U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb4-Rk-Xew" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2022" y="391"/>
+            <point key="canvasLocation" x="-2022.1374045801526" y="390.84507042253523"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="GQ2-fc-n5Q">
@@ -58,6 +81,18 @@
                                 <rect key="frame" x="8" y="251" width="377" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-vx-mZc">
+                                <rect key="frame" x="150" y="109.66666666666674" width="33" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4Z-di-zH4">
+                                <rect key="frame" x="26" y="104" width="135" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CA7-y3-SX6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -148,14 +183,14 @@
                                 <rect key="frame" x="0.0" y="299.66666666666669" width="393" height="13.333333333333314"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header3" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ab5-af-Thw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header3" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ab5-af-Thw">
                                 <rect key="frame" x="0.0" y="92.999999999999986" width="393" height="238.66666666666663"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header3" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9s-ZB-mXf">
                                 <rect key="frame" x="-7.6666666666666572" y="-153" width="408.33333333333326" height="246"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-Gm-PSc">
-                                <rect key="frame" x="0.0" y="313" width="393" height="491"/>
+                                <rect key="frame" x="0.0" y="313" width="393" height="456"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -175,7 +210,7 @@
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="trailing" secondItem="Bh8-Gm-PSc" secondAttribute="trailing" id="hSg-Nl-oNc"/>
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="top" secondItem="T9s-ZB-mXf" secondAttribute="top" constant="256" id="ipP-7d-6jI"/>
                             <constraint firstItem="vOz-vr-ebV" firstAttribute="width" secondItem="KHb-jr-nbW" secondAttribute="width" id="mgB-8E-Dgf"/>
-                            <constraint firstItem="Bh8-Gm-PSc" firstAttribute="bottom" secondItem="KHb-jr-nbW" secondAttribute="bottom" constant="35" id="pBc-5n-oEA"/>
+                            <constraint firstItem="Bh8-Gm-PSc" firstAttribute="bottom" secondItem="KHb-jr-nbW" secondAttribute="bottom" id="pBc-5n-oEA"/>
                             <constraint firstItem="Bh8-Gm-PSc" firstAttribute="leading" secondItem="KHb-jr-nbW" secondAttribute="leading" id="sM6-I6-zCQ"/>
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="top" secondItem="Ab5-af-Thw" secondAttribute="top" constant="10" id="sOA-Le-T6e"/>
                             <constraint firstItem="cax-tS-zeA" firstAttribute="centerX" secondItem="K7i-KM-cNL" secondAttribute="centerX" id="wKP-EZ-q1O"/>
@@ -236,11 +271,12 @@
     <resources>
         <image name="poke-header-mini" width="411" height="80"/>
         <image name="poke-header3" width="408" height="246"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

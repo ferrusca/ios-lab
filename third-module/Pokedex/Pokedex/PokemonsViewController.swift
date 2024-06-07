@@ -57,6 +57,7 @@ extension PokemonsViewController: UITableViewDataSource {
         cellContent.text = pokemon.name
         cellContent.secondaryText = "# \(pokemon.number)"
         cell.contentConfiguration = cellContent;
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
