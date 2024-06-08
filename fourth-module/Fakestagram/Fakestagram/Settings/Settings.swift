@@ -6,8 +6,15 @@
 import Foundation
 
 struct Settings {
+    // User to be retrieved from anywhere
     static var user: User? {
-        return nil
+        get {
+            try? UserDefaults.standard.get(for: "user")
+        }
+        set {
+            // `newValue` holds the value of the user
+            try? UserDefaults.standard.set(value: newValue, for: "user")
+        }
     }
     static var hideCaptions: Bool {
         get {

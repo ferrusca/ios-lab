@@ -30,6 +30,11 @@
 		2FFBD3612BCA193700BE91D7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3602BCA193700BE91D7 /* PhotoCell.swift */; };
 		2FFBD3882BE5B86200BE91D7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3872BE5B86200BE91D7 /* SettingsView.swift */; };
 		2FFBD38A2BE5D62300BE91D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3892BE5D62300BE91D7 /* LoginView.swift */; };
+		DAF9A8BC2C13CEA400FA81E1 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BB2C13CEA400FA81E1 /* UserDTO.swift */; };
+		DAF9A8BE2C13CF2900FA81E1 /* AddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BD2C13CF2900FA81E1 /* AddressDTO.swift */; };
+		DAF9A8C02C13E5E700FA81E1 /* PhotoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BF2C13E5E700FA81E1 /* PhotoDTO.swift */; };
+		DAF9A8C22C13EBB800FA81E1 /* PostDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8C12C13EBB800FA81E1 /* PostDTO.swift */; };
+		DAF9A8C42C13EC2600FA81E1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8C32C13EC2600FA81E1 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		2FFBD3602BCA193700BE91D7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		2FFBD3872BE5B86200BE91D7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FFBD3892BE5D62300BE91D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DAF9A8BB2C13CEA400FA81E1 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		DAF9A8BD2C13CF2900FA81E1 /* AddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDTO.swift; sourceTree = "<group>"; };
+		DAF9A8BF2C13E5E700FA81E1 /* PhotoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDTO.swift; sourceTree = "<group>"; };
+		DAF9A8C12C13EBB800FA81E1 /* PostDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDTO.swift; sourceTree = "<group>"; };
+		DAF9A8C32C13EC2600FA81E1 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,7 @@
 		2F7B29C12C0FF5DE00ACEC21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DAF9A8BA2C13CE4800FA81E1 /* DTO */,
 				2F7B29C02C0FF5D300ACEC21 /* Responses */,
 			);
 			path = Networking;
@@ -94,6 +105,7 @@
 			children = (
 				2F7B29CC2C10015C00ACEC21 /* User.swift */,
 				2FFBD3432BC0CA5C00BE91D7 /* Photo.swift */,
+				DAF9A8C32C13EC2600FA81E1 /* Post.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -198,6 +210,17 @@
 			path = Photos;
 			sourceTree = "<group>";
 		};
+		DAF9A8BA2C13CE4800FA81E1 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				DAF9A8BB2C13CEA400FA81E1 /* UserDTO.swift */,
+				DAF9A8BD2C13CF2900FA81E1 /* AddressDTO.swift */,
+				DAF9A8BF2C13E5E700FA81E1 /* PhotoDTO.swift */,
+				DAF9A8C12C13EBB800FA81E1 /* PostDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,12 +302,17 @@
 				2F7B2A032C12AA8E00ACEC21 /* PhotosModel.swift in Sources */,
 				2F7B2A0D2C12AD3200ACEC21 /* PostsModel.swift in Sources */,
 				2F7B2A0E2C12AD3200ACEC21 /* PostsViewController.swift in Sources */,
+				DAF9A8BE2C13CF2900FA81E1 /* AddressDTO.swift in Sources */,
+				DAF9A8C02C13E5E700FA81E1 /* PhotoDTO.swift in Sources */,
 				2FCCEC792BA504B900B1F17F /* AppDelegate.swift in Sources */,
+				DAF9A8C22C13EBB800FA81E1 /* PostDTO.swift in Sources */,
+				DAF9A8C42C13EC2600FA81E1 /* Post.swift in Sources */,
 				2F7B29CD2C10015C00ACEC21 /* User.swift in Sources */,
 				2F7B2A012C12A45600ACEC21 /* Extensions.swift in Sources */,
 				2FFBD3612BCA193700BE91D7 /* PhotoCell.swift in Sources */,
 				2FFBD3402BC0C8E800BE91D7 /* PhotosViewController.swift in Sources */,
 				2F7B29CB2C10014400ACEC21 /* UserModel.swift in Sources */,
+				DAF9A8BC2C13CEA400FA81E1 /* UserDTO.swift in Sources */,
 				2FCCEC7B2BA504B900B1F17F /* SceneDelegate.swift in Sources */,
 				2FFBD38A2BE5D62300BE91D7 /* LoginView.swift in Sources */,
 				2FFBD33E2BC0C41B00BE91D7 /* SettingsViewController.swift in Sources */,

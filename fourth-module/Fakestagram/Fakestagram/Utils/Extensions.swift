@@ -16,3 +16,31 @@ extension UIViewController {
         present(alertController, animated: true)
     }
 }
+
+// Generic way to be able to decode to the class used - eg. MyAwesomeDTO(data: data)
+extension Decodable {
+    init(data: Data) throws {
+        self = try JSONDecoder().decode(Self.self, from: data)
+    }
+}
+
+// Serializes the passed data
+extension Data {
+    init(from object: Encodable) throws {
+        self = try JSONEncoder().encode(object)
+    }
+}
+
+extension UserDefaults {
+    // ExpressibleByNilLiteral allows to return nil in case the key is not found
+    // this is useful to mimic UserDefault.get()
+    func get<T: Decodable & ExpressibleByNilLiteral>(for key: String) throws -> T {
+        guard let data = data(forKey: key) else { return nil }
+        return try T(data:data)
+    }
+    
+    func set(value: Encodable, for key: String) throws {
+        let data = try Data(from: value)
+        set(data, forKey: key)
+    }
+}

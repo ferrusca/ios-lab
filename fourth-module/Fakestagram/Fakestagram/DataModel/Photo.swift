@@ -7,5 +7,5 @@ import UIKit
 
 struct Photo {
     let image: UIImage
-    let caption: String?
+    let caption: String
 }

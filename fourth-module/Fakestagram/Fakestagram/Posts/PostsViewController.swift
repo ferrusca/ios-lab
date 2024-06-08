@@ -21,6 +21,35 @@ class PostsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Post"
+        if let user = Settings.user {
+            try? postsModel.getUserPosts(userId: user.id)
+        }
+        tableView.reloadData()
+
+//        setupTableView()
+    }
+}
+
+
+//MARK: - Delegate and data source methods
+extension PostsViewController {
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") ?? UITableViewCell(style: .default, reuseIdentifier: "postCell")
+        
+        var cellContent = cell.defaultContentConfiguration()
+        cellContent.text = postsModel.post(for: indexPath.section).body
+        cell.contentConfiguration = cellContent;
+      
+        return cell
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        postsModel.getNumberOfPosts()
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
 }

@@ -22,6 +22,13 @@ class PhotosViewController: UITableViewController {
         super.viewDidLoad()
         tableView.register(PhotoCell.self, forCellReuseIdentifier: PhotoCell.name)
         navigationItem.title = "Photos"
+        try? picturesModel.getAllPhotos()
+        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
 
 }
