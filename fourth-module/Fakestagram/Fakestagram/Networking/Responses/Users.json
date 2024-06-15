@@ -6,7 +6,7 @@
         "email": "foo@bar",
         "address": {
             "street": "Kulas Light",
-            "cityOfResidence": "Gwenborough",
+            "city": "Gwenborough",
             "zipcode": "92998-3874",
             "geo": {
                 "lat": "-37.3159",

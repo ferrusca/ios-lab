@@ -19,8 +19,27 @@ enum UserModelError: Error, LocalizedError {
     }
 }
 
+enum UserModelHTTPError: Error, LocalizedError {
+    case userNotFound, parsingError, fileError, badRequest, unexpectedResponse, invalidUser
+    case badResponse(Int)
+    
+    var errorDescription: String? {
+        switch self {
+        case .fileError: return "Could not read from file"
+        case .userNotFound: return "User not found"
+        case .parsingError: return "Could not parse response"
+        case .badRequest: return "The request could not be built."
+        case .badResponse(let code): return "HTTP response \(code)"
+        case .unexpectedResponse: return "Could not interpret response."
+        case .invalidUser: return "Your user information is incomplete, please log in from our website to complete it. "
+        }
+    
+    }
+}
+
 class UserModel {
     static var hola: String { return "Hola" }
+    let requestHandler = RequestHandler()
     
     var user: User? {
         didSet {
@@ -57,7 +76,6 @@ extension UserModel {
     }
     
     func findUser(by email: String) throws {
-        print("printtt ")
         // retrieving data from the users.json file
         guard let url = Bundle.main.url(forResource: "Users", withExtension: "json") else {
             throw UserModelError.fileError
@@ -76,4 +94,38 @@ extension UserModel {
         guard let userDTO else { throw UserModelError.userNotFound }
         user = getUserFromDTO(userDTO)
     }
+    
+    // 2nd argument is a clousure with an optional error
+    public func findUserFromExternalAPI(email: String, completitionHandler: @escaping (Error?) -> Void) {
+        requestHandler.get(buildEndpoint(email: "Shanna@melissa.tv")) { (result: Result<[UserDTO], Error>) in
+            switch result {
+            case .success(let users):
+                guard let userDTO = users.first else {
+                    completitionHandler(UserModelError.userNotFound)
+                    return
+                }
+                
+                
+                    self.user = self.getUserFromDTO(userDTO)
+                    // successfully completed, no errors
+                    completitionHandler(nil)
+                
+            case .failure(let failure):
+                completitionHandler(failure)
+            }
+            
+        }
+    }
+    
+    func buildEndpoint(email: String) -> EndpointProtocol {
+        let queries = [
+            URLQueryItem(name: "email", value: email)
+        ];
+        
+        return UserBaseEndpoint(path: "/users", queries: queries)
+    }
 }
+
+
+
+

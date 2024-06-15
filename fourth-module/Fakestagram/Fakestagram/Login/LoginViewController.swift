@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
         customView.usernameTextfield.text?.isEmpty ?? false
     }
     
-    private func logIn() {
+    private func login() {
         router?.logIn()
     }
     
@@ -52,11 +52,24 @@ extension LoginViewController {
             return presentErrorAlert(title: "Error", message: "Please enter your email")
         }
         
-        do {
-            try userModel.findUser(by: email)
-            logIn()
-        } catch {
-            presentErrorAlert(title: "Error", message: error.localizedDescription)
+//        do {
+//            try userModel.findUser(by: email)
+//            login()
+//        } catch {
+//            presentErrorAlert(title: "Error", message: error.localizedDescription)
+//        }
+        
+        userModel.findUserFromExternalAPI(email: email) { [weak self] error in
+            if let error {
+                DispatchQueue.main.async {
+                    self?.presentErrorAlert(title: "Error", message: error.localizedDescription)
+                }
+                
+            } else {
+                DispatchQueue.main.async {
+                    self?.login()
+                }
+            }
         }
         
     }

@@ -22,11 +22,18 @@ class PostsViewController: UITableViewController {
         super.viewDidLoad()
         navigationItem.title = "Post"
         if let user = Settings.user {
-            try? postsModel.getUserPosts(userId: user.id)
+            postsModel.getPostsFromUser2(id: "\(user.id)") { [weak self] error in
+                print("hola2")
+                DispatchQueue.main.async {
+                    if let error {
+                        self?.presentErrorAlert(title: "Error", message: error.localizedDescription)
+                        return
+                    }
+                    self?.tableView.reloadData()
+                }
+            }
         }
-        tableView.reloadData()
-
-//        setupTableView()
+        //        setupTableView()
     }
 }
 

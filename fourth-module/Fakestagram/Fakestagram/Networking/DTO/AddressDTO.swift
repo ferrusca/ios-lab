@@ -16,7 +16,7 @@ struct AddressDTO: Decodable {
     
     // map from original to new key values
     private enum CodingKeys: String, CodingKey {
-        case city = "cityOfResidence"
+        case city
         case street
         case zipCode = "zipcode"
     }

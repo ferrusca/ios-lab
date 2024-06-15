@@ -30,6 +30,11 @@
 		2FFBD3612BCA193700BE91D7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3602BCA193700BE91D7 /* PhotoCell.swift */; };
 		2FFBD3882BE5B86200BE91D7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3872BE5B86200BE91D7 /* SettingsView.swift */; };
 		2FFBD38A2BE5D62300BE91D7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFBD3892BE5D62300BE91D7 /* LoginView.swift */; };
+		DAC678652C1DEFFC0004191D /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC678642C1DEFFC0004191D /* EndpointProtocol.swift */; };
+		DAC678692C1DF17D0004191D /* UserBaseEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC678682C1DF17D0004191D /* UserBaseEndpoint.swift */; };
+		DAC6786F2C1DF6AF0004191D /* RequestHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC6786E2C1DF6AF0004191D /* RequestHandlerProtocol.swift */; };
+		DAC678712C1DF6FA0004191D /* RequestHandlerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC678702C1DF6FA0004191D /* RequestHandlerError.swift */; };
+		DAC678732C1DF7CA0004191D /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC678722C1DF7CA0004191D /* RequestHandler.swift */; };
 		DAF9A8BC2C13CEA400FA81E1 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BB2C13CEA400FA81E1 /* UserDTO.swift */; };
 		DAF9A8BE2C13CF2900FA81E1 /* AddressDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BD2C13CF2900FA81E1 /* AddressDTO.swift */; };
 		DAF9A8C02C13E5E700FA81E1 /* PhotoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9A8BF2C13E5E700FA81E1 /* PhotoDTO.swift */; };
@@ -63,6 +68,11 @@
 		2FFBD3602BCA193700BE91D7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		2FFBD3872BE5B86200BE91D7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FFBD3892BE5D62300BE91D7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		DAC678642C1DEFFC0004191D /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		DAC678682C1DF17D0004191D /* UserBaseEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBaseEndpoint.swift; sourceTree = "<group>"; };
+		DAC6786E2C1DF6AF0004191D /* RequestHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlerProtocol.swift; sourceTree = "<group>"; };
+		DAC678702C1DF6FA0004191D /* RequestHandlerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandlerError.swift; sourceTree = "<group>"; };
+		DAC678722C1DF7CA0004191D /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 		DAF9A8BB2C13CEA400FA81E1 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		DAF9A8BD2C13CF2900FA81E1 /* AddressDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDTO.swift; sourceTree = "<group>"; };
 		DAF9A8BF2C13E5E700FA81E1 /* PhotoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDTO.swift; sourceTree = "<group>"; };
@@ -94,6 +104,8 @@
 		2F7B29C12C0FF5DE00ACEC21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DAC6786D2C1DF6650004191D /* RequestHandler */,
+				DAC678632C1DEFE60004191D /* Endpoint */,
 				DAF9A8BA2C13CE4800FA81E1 /* DTO */,
 				2F7B29C02C0FF5D300ACEC21 /* Responses */,
 			);
@@ -210,6 +222,25 @@
 			path = Photos;
 			sourceTree = "<group>";
 		};
+		DAC678632C1DEFE60004191D /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				DAC678642C1DEFFC0004191D /* EndpointProtocol.swift */,
+				DAC678682C1DF17D0004191D /* UserBaseEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		DAC6786D2C1DF6650004191D /* RequestHandler */ = {
+			isa = PBXGroup;
+			children = (
+				DAC6786E2C1DF6AF0004191D /* RequestHandlerProtocol.swift */,
+				DAC678702C1DF6FA0004191D /* RequestHandlerError.swift */,
+				DAC678722C1DF7CA0004191D /* RequestHandler.swift */,
+			);
+			path = RequestHandler;
+			sourceTree = "<group>";
+		};
 		DAF9A8BA2C13CE4800FA81E1 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +327,7 @@
 			files = (
 				2FFBD3512BC9EB3200BE91D7 /* LoginViewController.swift in Sources */,
 				2F7B2A122C12B21500ACEC21 /* MainRouter.swift in Sources */,
+				DAC678712C1DF6FA0004191D /* RequestHandlerError.swift in Sources */,
 				2FFBD3442BC0CA5C00BE91D7 /* Photo.swift in Sources */,
 				2FFBD3882BE5B86200BE91D7 /* SettingsView.swift in Sources */,
 				2F7B2A102C12B10A00ACEC21 /* Settings.swift in Sources */,
@@ -306,12 +338,16 @@
 				DAF9A8C02C13E5E700FA81E1 /* PhotoDTO.swift in Sources */,
 				2FCCEC792BA504B900B1F17F /* AppDelegate.swift in Sources */,
 				DAF9A8C22C13EBB800FA81E1 /* PostDTO.swift in Sources */,
+				DAC678692C1DF17D0004191D /* UserBaseEndpoint.swift in Sources */,
+				DAC678732C1DF7CA0004191D /* RequestHandler.swift in Sources */,
+				DAC678652C1DEFFC0004191D /* EndpointProtocol.swift in Sources */,
 				DAF9A8C42C13EC2600FA81E1 /* Post.swift in Sources */,
 				2F7B29CD2C10015C00ACEC21 /* User.swift in Sources */,
 				2F7B2A012C12A45600ACEC21 /* Extensions.swift in Sources */,
 				2FFBD3612BCA193700BE91D7 /* PhotoCell.swift in Sources */,
 				2FFBD3402BC0C8E800BE91D7 /* PhotosViewController.swift in Sources */,
 				2F7B29CB2C10014400ACEC21 /* UserModel.swift in Sources */,
+				DAC6786F2C1DF6AF0004191D /* RequestHandlerProtocol.swift in Sources */,
 				DAF9A8BC2C13CEA400FA81E1 /* UserDTO.swift in Sources */,
 				2FCCEC7B2BA504B900B1F17F /* SceneDelegate.swift in Sources */,
 				2FFBD38A2BE5D62300BE91D7 /* LoginView.swift in Sources */,

@@ -6,8 +6,14 @@
 import UIKit
 
 class PhotosViewController: UITableViewController {
-    
     private var picturesModel = PhotosModel()
+    
+    // configure loader
+    private var activityIndicator: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.hidesWhenStopped = true
+        return view
+    }()
     
     override init(style: UITableView.Style) {
         super.init(style: style)
@@ -20,15 +26,47 @@ class PhotosViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // add loader
+        view.addSubview(activityIndicator)
         tableView.register(PhotoCell.self, forCellReuseIdentifier: PhotoCell.name)
         navigationItem.title = "Photos"
-        try? picturesModel.getAllPhotos()
-        tableView.reloadData()
+//        Previous version
+//        try? picturesModel.getAllPhotos()
+//        tableView.reloadData()
+        
+        // new version
+        fetchPhotos()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    
+    // function when all UI elements were arranged
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        // centering the loader
+        activityIndicator.center = view.center
+    }
+    
+    func fetchPhotos() {
+        activityIndicator.startAnimating()
+        guard let userId = Settings.user?.id else { return }
+        picturesModel.getAllPhotosFromExternal(userId: "\(userId)") { [weak self] error in
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+                if let error {
+                    print(error)
+                    self?.presentErrorAlert(title: "Error", message: error.localizedDescription)
+                    return
+                }
+                // data returned successfully, reloading table view
+                self?.tableView.reloadData()
+            }
+            
+        }
     }
 
 }
