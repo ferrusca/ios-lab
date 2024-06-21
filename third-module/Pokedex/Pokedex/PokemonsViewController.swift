@@ -38,9 +38,19 @@ class PokemonsViewController: UIViewController {
 
 extension PokemonsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredPokemons = pokemonModel.getPokemons(searchText: searchText)
+        pokemonModel.getAllFromAPI(foo: 1) { [weak self] error in
+            DispatchQueue.main.async {
+                if let error {
+                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(.init(title: "OK", style: .default))
+                    self?.present(alertController, animated: true)
+                    return
+                }
+                self?.filteredPokemons = self?.pokemonModel.getPokemons(searchText: searchText) ?? []
+                self?.tableView.reloadData()
+            }
+        }
         
-        tableView.reloadData()
     }
 }
 

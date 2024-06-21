@@ -16,6 +16,21 @@ struct Pokemon: Codable {
     let evolutionChain: [String]
 }
 
+struct PokemonResponse: Decodable {
+    let results: [PokemonDTO]
+}
+
+struct PokemonDTO: Decodable {
+    let name: String
+    let url: String
+    
+//    // map from original to new key values
+//    private enum CodingKeys: String, CodingKey {
+//        case name
+//        case detailsURL = "url"
+//    }
+}
+
 class PokemonModel {
     var favorites: [Pokemon] = {
         if let savedData = UserDefaults.standard.data(forKey: "favoritePokemons"),
@@ -28,6 +43,33 @@ class PokemonModel {
         }
     }()
     
+    public func getAllFromAPI(foo: Int, completitionHandler: @escaping (Error?) -> Void) {
+        RequestHandler().get(buildEndpoint()) { (result: Result<PokemonResponse, Error>) in
+            print("result")
+                    switch result {
+                    case .success(let pokemonDTOs):
+                        print(pokemonDTOs)
+                        self.pokemons = pokemonDTOs.results.enumerated().map { (index, pokemonDTO) in
+                            Pokemon(name: pokemonDTO.name, image: "", number: "\(index + 1)", pokedexInfo: "", types: [], evolutionChain: [])
+                        }
+                        // no errors
+                        completitionHandler(nil)
+                    case .failure(let failure):
+                        print(failure)
+                        completitionHandler(failure)
+                    }
+                    
+                }
+    }
+    
+    func buildEndpoint() -> EndpointProtocol {
+        let queries = [
+            URLQueryItem(name: "limit", value: "100000"),
+            URLQueryItem(name: "offset", value: "0")
+        ]
+        
+        return UserBaseEndpoint(path: "/pokemon", queries: queries)
+    }
     
     private var pokemons: [Pokemon] = [
         Pokemon(
