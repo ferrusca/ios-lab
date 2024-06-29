@@ -32,10 +32,9 @@ class FavoritePokemonDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
         // MARK: this method shows a Lottie animation
         // setupView2()
-
+        setupView()
     }
     
     // MARK: Currently deactivated
