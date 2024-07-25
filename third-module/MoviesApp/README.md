@@ -1,8 +1,9 @@
-# CollectionViewTableCell
-UICollectionView Inside A UITableViewCell With Self Sizing
+# MoviesApp
 
-If you are looking for a way to put a collection view inside a table cell without manually calculating table row heights, you are in the right place.
+This application has a `UICollectionView` inside a `UITableViewCell`
 
-If your app target is iOS 14, you might consider using UICollectionLayoutListConfiguration (https://developer.apple.com/documentation/uikit/uicollectionlayoutlistconfiguration) to construct sections of the collection view as lists like in table views. Here is a WWDC-20 video, https://developer.apple.com/videos/play/wwdc2020/10026/, showing how to do that.
+- The main view is a `UITableView` that has different film genres (Action, Drama and Fantasy).
+- The `UITableViewCell` declares a `UICollectionView`, which represents the movie list from each genre.
+- Finally, the `UICollectionViewCell` represents every single movie in the collection.
 
-This was written when iOS 14 just came out. Many apps still target iOS 13 or earlier. This method is for those apps.
+![Screenshot of the application](./MoviesApp/Assets.xcassets/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-24%20at%2022.50.25.imageset/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-07-24%20at%2022.50.25.png)
