@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewTableCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="netflix" translatesAutoresizingMaskIntoConstraints="NO" id="lEU-oQ-fiX">
+                                <rect key="frame" x="103.5" y="64" width="207" height="57"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular on Netflix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eL-dB-Uhs">
+                                <rect key="frame" x="16" y="153" width="168" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="jj0-tZ-GVJ">
+                                <rect key="frame" x="0.0" y="185" width="414" height="677"/>
+                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                <color key="separatorColor" systemColor="systemRedColor"/>
+                                <color key="sectionIndexColor" systemColor="systemRedColor"/>
+                                <color key="sectionIndexBackgroundColor" name="AccentColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" name="AccentColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XBJ-CF-3cs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xhf-J7-JEc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="9eL-dB-Uhs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4EC-Pa-R0K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jj0-tZ-GVJ" secondAttribute="bottom" id="6pM-yn-bs7"/>
+                            <constraint firstItem="jj0-tZ-GVJ" firstAttribute="top" secondItem="9eL-dB-Uhs" secondAttribute="bottom" constant="8" id="Dcp-8L-OUX"/>
+                            <constraint firstItem="lEU-oQ-fiX" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.07" id="KXj-wZ-Mfi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jj0-tZ-GVJ" secondAttribute="trailing" id="N0D-xe-x2H"/>
+                            <constraint firstItem="lEU-oQ-fiX" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="Qht-xU-Wo9"/>
+                            <constraint firstItem="9eL-dB-Uhs" firstAttribute="top" secondItem="lEU-oQ-fiX" secondAttribute="bottom" constant="32" id="aUi-k7-sGN"/>
+                            <constraint firstItem="lEU-oQ-fiX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="agm-vK-zbY"/>
+                            <constraint firstItem="lEU-oQ-fiX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m1D-sq-kA2"/>
+                            <constraint firstItem="jj0-tZ-GVJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w16-xy-qAc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="jj0-tZ-GVJ" id="ULN-zg-nVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93" y="113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="netflix" width="4096" height="4096"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

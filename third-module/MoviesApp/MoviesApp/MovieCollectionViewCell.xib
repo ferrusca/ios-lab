@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="movieCell" id="eSU-qa-tcx" customClass="MovieCollectionViewCell" customModule="CollectionViewTableCell" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ihB-96-fW6">
+                <rect key="frame" x="0.0" y="0.0" width="314" height="225"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKk-py-RdY">
+                        <rect key="frame" x="0.0" y="0.0" width="314" height="191"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ATu-LV-C50">
+                                <rect key="frame" x="31.333333333333329" y="8" width="251.33333333333337" height="138"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hola" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-zZ-wfH">
+                                <rect key="frame" x="31.333333333333329" y="158" width="251.33333333333337" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                        <constraints>
+                            <constraint firstItem="ATu-LV-C50" firstAttribute="centerX" secondItem="XKk-py-RdY" secondAttribute="centerX" id="3WW-jX-m0S"/>
+                            <constraint firstItem="fgN-zZ-wfH" firstAttribute="width" secondItem="ATu-LV-C50" secondAttribute="width" id="PSm-um-Nws"/>
+                            <constraint firstItem="ATu-LV-C50" firstAttribute="width" secondItem="XKk-py-RdY" secondAttribute="width" multiplier="0.8" id="TIP-JB-HDX"/>
+                            <constraint firstItem="ATu-LV-C50" firstAttribute="top" secondItem="XKk-py-RdY" secondAttribute="top" constant="8" id="Ztb-Zn-mev"/>
+                            <constraint firstAttribute="bottom" secondItem="fgN-zZ-wfH" secondAttribute="bottom" constant="12" id="kUI-1n-TEr"/>
+                            <constraint firstItem="fgN-zZ-wfH" firstAttribute="centerX" secondItem="XKk-py-RdY" secondAttribute="centerX" id="lqe-qb-GDs"/>
+                            <constraint firstItem="fgN-zZ-wfH" firstAttribute="top" secondItem="ATu-LV-C50" secondAttribute="bottom" constant="12" id="mPO-oC-cJ4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="BMT-aw-0vs"/>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="XKk-py-RdY" firstAttribute="leading" secondItem="BMT-aw-0vs" secondAttribute="leading" id="N95-aY-lSp"/>
+                    <constraint firstItem="XKk-py-RdY" firstAttribute="top" secondItem="ihB-96-fW6" secondAttribute="top" id="NS6-zg-wll"/>
+                    <constraint firstItem="BMT-aw-0vs" firstAttribute="trailing" secondItem="XKk-py-RdY" secondAttribute="trailing" id="Y6T-IX-QZw"/>
+                    <constraint firstItem="BMT-aw-0vs" firstAttribute="bottom" secondItem="XKk-py-RdY" secondAttribute="bottom" id="igN-jz-JB8"/>
+                    <constraint firstItem="XKk-py-RdY" firstAttribute="centerX" secondItem="ihB-96-fW6" secondAttribute="centerX" id="kuA-eZ-7wg"/>
+                </constraints>
+                <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+            </collectionViewCellContentView>
+            <size key="customSize" width="314" height="225"/>
+            <connections>
+                <outlet property="movieImageView" destination="ATu-LV-C50" id="muX-hV-P9e"/>
+                <outlet property="movieLabel" destination="fgN-zZ-wfH" id="kcA-k5-vBb"/>
+            </connections>
+            <point key="canvasLocation" x="-56.488549618320612" y="80.633802816901408"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

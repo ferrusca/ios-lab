@@ -38,7 +38,7 @@ class NavigationTabBarController: UITabBarController {
         let favoritePokemonNavigationController = UINavigationController(rootViewController: favoritePokemonViewController)
         
         
-        // list of view controllers to present
+        // list of navigation controllers to present
         viewControllers = [
             pokemonNavigationController,
             favoritePokemonNavigationController
