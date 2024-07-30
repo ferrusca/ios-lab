@@ -22,7 +22,7 @@ class FavoritePokemonListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // MARK: this presents the FACE id modal
+        // MARK: uncomment to present the "Face ID" modal
 //        navigationController?.present(AuthenticationViewController(), animated: animated)
     }
 

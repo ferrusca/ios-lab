@@ -77,15 +77,8 @@ class PokemonListViewModel {
         return pokemonList[at.row]
     }
     
-    func addToFavorites(at indexPath: IndexPath) {
-        print("adding to")
-        favoritePokemonList.insert(pokemon(at: indexPath))
-        delegate?.shouldReloadInformation()
-        saveFavoritePokemon()
-    }
-    
     @objc private func saveFavoritePokemon() {
-        print("hola!!!")
+        print("saving fav pokemons in a json file...")
         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory,
                                                                 in: .userDomainMask).first
         else { return }
@@ -106,9 +99,8 @@ class PokemonListViewModel {
         }
     }
     
-    func addPokemonToFavorites(at indexPath: IndexPath) {
-        let pokemon = pokemon(at: indexPath)
-        favoritePokemonList.insert(pokemon)
+    public func addToFavorites(at indexPath: IndexPath) {
+        favoritePokemonList.insert(pokemon(at: indexPath))
         delegate?.shouldReloadInformation()
         saveFavoritePokemon()
     }

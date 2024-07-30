@@ -150,7 +150,8 @@ extension PokemonLocationViewController: PokemonLocationViewModelDelegate {
     
     func showRouteBetween(userLocation: CLLocationCoordinate2D, pokemonLocation: Location) {
         let directionsRequest = MKDirections.Request()
-        let pokemonCoordinates = CLLocationCoordinate2D(latitude: pokemonLocation.latitude, longitude: pokemonLocation.longitude)
+        let pokemonCoordinates = CLLocationCoordinate2D(latitude: pokemonLocation.latitude,
+                                                        longitude: pokemonLocation.longitude)
         
         directionsRequest.source = MKMapItem(placemark: MKPlacemark(coordinate: userLocation))
         directionsRequest.destination = MKMapItem(placemark: MKPlacemark(coordinate: pokemonCoordinates))
@@ -166,10 +167,6 @@ extension PokemonLocationViewController: PokemonLocationViewModelDelegate {
                 return
             }
             
-            print("userlocation")
-            print(userLocation)
-            print("pokemonLocation")
-            print(pokemonCoordinates)
             self?.mapView.addOverlay(route.polyline)
         }
     }
@@ -183,14 +180,6 @@ extension PokemonLocationViewController: MKMapViewDelegate {
         renderer.lineWidth = 8.0
         return renderer
     }
-    
-//    private func mapView(_ mapView: MKMapView, rendererFor overlay: any MKOverlay) -> MKPolylineRenderer {
-//        let renderer = MKPolylineRenderer(overlay: overlay)
-//        
-//        renderer.strokeColor = .green
-//        renderer.lineWidth = 8.0
-//        return renderer
-//    }
 }
 
 
