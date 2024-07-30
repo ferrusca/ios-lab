@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA3BD03E2C2FCA1900F67E1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD03D2C2FCA1900F67E1F /* AppDelegate.swift */; };
+		DA3BD0402C2FCA1900F67E1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD03F2C2FCA1900F67E1F /* SceneDelegate.swift */; };
+		DA3BD0452C2FCA1900F67E1F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA3BD0442C2FCA1900F67E1F /* Base */; };
+		DA3BD0472C2FCA1B00F67E1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3BD0462C2FCA1B00F67E1F /* Assets.xcassets */; };
+		DA3BD04A2C2FCA1B00F67E1F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = DA3BD0492C2FCA1B00F67E1F /* Base */; };
+		DA3BD0522C2FD71900F67E1F /* pizza-info.json in Resources */ = {isa = PBXBuildFile; fileRef = DA3BD0512C2FD71900F67E1F /* pizza-info.json */; };
+		DA3BD0552C2FD77500F67E1F /* PizzaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0542C2FD77500F67E1F /* PizzaListViewModel.swift */; };
+		DA3BD0582C2FD7E500F67E1F /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0572C2FD7E500F67E1F /* Pizza.swift */; };
+		DA3BD05A2C2FD7EE00F67E1F /* PizzaShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0592C2FD7EE00F67E1F /* PizzaShop.swift */; };
+		DA3BD05C2C2FDA9200F67E1F /* PizzaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD05B2C2FDA9200F67E1F /* PizzaListTableViewController.swift */; };
+		DA3BD05F2C2FDD2300F67E1F /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD05E2C2FDD2300F67E1F /* PizzaViewController.swift */; };
+		DA3BD0642C2FDF2E00F67E1F /* PizzaGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0632C2FDF2E00F67E1F /* PizzaGeneratorViewController.swift */; };
+		DA3BD0662C2FDF9B00F67E1F /* NavigationTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0652C2FDF9B00F67E1F /* NavigationTabBarController.swift */; };
+		DA3BD0682C2FE12100F67E1F /* CustomPizzaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0672C2FE12100F67E1F /* CustomPizzaListTableViewController.swift */; };
+		DA3BD06A2C2FEC6B00F67E1F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD0692C2FEC6B00F67E1F /* Extensions.swift */; };
+		DA3BD06C2C2FEDC700F67E1F /* PizzaShopListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD06B2C2FEDC700F67E1F /* PizzaShopListTableViewController.swift */; };
+		DA3BD06E2C2FEDEE00F67E1F /* PizzaShopListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3BD06D2C2FEDEE00F67E1F /* PizzaShopListViewModel.swift */; };
+		DAAF5F552C52F77C0033482C /* CustomPizzaListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5F542C52F77C0033482C /* CustomPizzaListModel.swift */; };
+		DAAF5F892C554E9B0033482C /* PizzaShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5F882C554E9B0033482C /* PizzaShopViewController.swift */; };
+		DAAF5F8B2C55509F0033482C /* PizzaShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAF5F8A2C55509F0033482C /* PizzaShopViewModel.swift */; };
+		DAAF5F8E2C55638D0033482C /* not-found-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = DAAF5F8D2C55638D0033482C /* not-found-animation.json */; };
+		DAAF5F912C5568E50033482C /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = DAAF5F902C5568E50033482C /* Lottie */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA3BD03A2C2FCA1900F67E1F /* PizzaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA3BD03D2C2FCA1900F67E1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA3BD03F2C2FCA1900F67E1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA3BD0442C2FCA1900F67E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA3BD0462C2FCA1B00F67E1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA3BD0492C2FCA1B00F67E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA3BD04B2C2FCA1B00F67E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA3BD0512C2FD71900F67E1F /* pizza-info.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pizza-info.json"; sourceTree = "<group>"; };
+		DA3BD0542C2FD77500F67E1F /* PizzaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaListViewModel.swift; sourceTree = "<group>"; };
+		DA3BD0572C2FD7E500F67E1F /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		DA3BD0592C2FD7EE00F67E1F /* PizzaShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShop.swift; sourceTree = "<group>"; };
+		DA3BD05B2C2FDA9200F67E1F /* PizzaListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaListTableViewController.swift; sourceTree = "<group>"; };
+		DA3BD05E2C2FDD2300F67E1F /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
+		DA3BD0632C2FDF2E00F67E1F /* PizzaGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaGeneratorViewController.swift; sourceTree = "<group>"; };
+		DA3BD0652C2FDF9B00F67E1F /* NavigationTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabBarController.swift; sourceTree = "<group>"; };
+		DA3BD0672C2FE12100F67E1F /* CustomPizzaListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPizzaListTableViewController.swift; sourceTree = "<group>"; };
+		DA3BD0692C2FEC6B00F67E1F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DA3BD06B2C2FEDC700F67E1F /* PizzaShopListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopListTableViewController.swift; sourceTree = "<group>"; };
+		DA3BD06D2C2FEDEE00F67E1F /* PizzaShopListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopListViewModel.swift; sourceTree = "<group>"; };
+		DAAF5F542C52F77C0033482C /* CustomPizzaListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPizzaListModel.swift; sourceTree = "<group>"; };
+		DAAF5F882C554E9B0033482C /* PizzaShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopViewController.swift; sourceTree = "<group>"; };
+		DAAF5F8A2C55509F0033482C /* PizzaShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopViewModel.swift; sourceTree = "<group>"; };
+		DAAF5F8D2C55638D0033482C /* not-found-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "not-found-animation.json"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA3BD0372C2FCA1900F67E1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAF5F912C5568E50033482C /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA3BD0312C2FCA1900F67E1F = {
+			isa = PBXGroup;
+			children = (
+				DA3BD03C2C2FCA1900F67E1F /* PizzaShop */,
+				DA3BD03B2C2FCA1900F67E1F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA3BD03B2C2FCA1900F67E1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD03A2C2FCA1900F67E1F /* PizzaShop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA3BD03C2C2FCA1900F67E1F /* PizzaShop */ = {
+			isa = PBXGroup;
+			children = (
+				DAAF5F8C2C5563790033482C /* Animations */,
+				DAAF5F872C554E5F0033482C /* PizzaShop */,
+				DAAF5F532C52F1610033482C /* PizzaGenerator */,
+				DA3BD0622C2FDF0F00F67E1F /* CustomPizzaList */,
+				DA3BD0612C2FDEFB00F67E1F /* PizzaShopList */,
+				DA3BD05D2C2FDCB600F67E1F /* Pizza */,
+				DA3BD0562C2FD7DB00F67E1F /* Model */,
+				DA3BD0532C2FD75D00F67E1F /* PizzaList */,
+				DA3BD03D2C2FCA1900F67E1F /* AppDelegate.swift */,
+				DA3BD03F2C2FCA1900F67E1F /* SceneDelegate.swift */,
+				DA3BD0432C2FCA1900F67E1F /* Main.storyboard */,
+				DA3BD0462C2FCA1B00F67E1F /* Assets.xcassets */,
+				DA3BD0482C2FCA1B00F67E1F /* LaunchScreen.storyboard */,
+				DA3BD04B2C2FCA1B00F67E1F /* Info.plist */,
+				DA3BD0512C2FD71900F67E1F /* pizza-info.json */,
+				DA3BD0652C2FDF9B00F67E1F /* NavigationTabBarController.swift */,
+				DA3BD0692C2FEC6B00F67E1F /* Extensions.swift */,
+			);
+			path = PizzaShop;
+			sourceTree = "<group>";
+		};
+		DA3BD0532C2FD75D00F67E1F /* PizzaList */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD0542C2FD77500F67E1F /* PizzaListViewModel.swift */,
+				DA3BD05B2C2FDA9200F67E1F /* PizzaListTableViewController.swift */,
+			);
+			path = PizzaList;
+			sourceTree = "<group>";
+		};
+		DA3BD0562C2FD7DB00F67E1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD0572C2FD7E500F67E1F /* Pizza.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA3BD05D2C2FDCB600F67E1F /* Pizza */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD05E2C2FDD2300F67E1F /* PizzaViewController.swift */,
+			);
+			path = Pizza;
+			sourceTree = "<group>";
+		};
+		DA3BD0612C2FDEFB00F67E1F /* PizzaShopList */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD06B2C2FEDC700F67E1F /* PizzaShopListTableViewController.swift */,
+				DA3BD06D2C2FEDEE00F67E1F /* PizzaShopListViewModel.swift */,
+			);
+			path = PizzaShopList;
+			sourceTree = "<group>";
+		};
+		DA3BD0622C2FDF0F00F67E1F /* CustomPizzaList */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD0672C2FE12100F67E1F /* CustomPizzaListTableViewController.swift */,
+				DAAF5F542C52F77C0033482C /* CustomPizzaListModel.swift */,
+			);
+			path = CustomPizzaList;
+			sourceTree = "<group>";
+		};
+		DAAF5F532C52F1610033482C /* PizzaGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD0632C2FDF2E00F67E1F /* PizzaGeneratorViewController.swift */,
+			);
+			path = PizzaGenerator;
+			sourceTree = "<group>";
+		};
+		DAAF5F872C554E5F0033482C /* PizzaShop */ = {
+			isa = PBXGroup;
+			children = (
+				DA3BD0592C2FD7EE00F67E1F /* PizzaShop.swift */,
+				DAAF5F882C554E9B0033482C /* PizzaShopViewController.swift */,
+				DAAF5F8A2C55509F0033482C /* PizzaShopViewModel.swift */,
+			);
+			path = PizzaShop;
+			sourceTree = "<group>";
+		};
+		DAAF5F8C2C5563790033482C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				DAAF5F8D2C55638D0033482C /* not-found-animation.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA3BD0392C2FCA1900F67E1F /* PizzaShop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA3BD04E2C2FCA1B00F67E1F /* Build configuration list for PBXNativeTarget "PizzaShop" */;
+			buildPhases = (
+				DA3BD0362C2FCA1900F67E1F /* Sources */,
+				DA3BD0372C2FCA1900F67E1F /* Frameworks */,
+				DA3BD0382C2FCA1900F67E1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PizzaShop;
+			packageProductDependencies = (
+				DAAF5F902C5568E50033482C /* Lottie */,
+			);
+			productName = PizzaShop;
+			productReference = DA3BD03A2C2FCA1900F67E1F /* PizzaShop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA3BD0322C2FCA1900F67E1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					DA3BD0392C2FCA1900F67E1F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = DA3BD0352C2FCA1900F67E1F /* Build configuration list for PBXProject "PizzaShop" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA3BD0312C2FCA1900F67E1F;
+			packageReferences = (
+				DAAF5F8F2C5568E50033482C /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = DA3BD03B2C2FCA1900F67E1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA3BD0392C2FCA1900F67E1F /* PizzaShop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA3BD0382C2FCA1900F67E1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAF5F8E2C55638D0033482C /* not-found-animation.json in Resources */,
+				DA3BD0472C2FCA1B00F67E1F /* Assets.xcassets in Resources */,
+				DA3BD04A2C2FCA1B00F67E1F /* Base in Resources */,
+				DA3BD0522C2FD71900F67E1F /* pizza-info.json in Resources */,
+				DA3BD0452C2FCA1900F67E1F /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA3BD0362C2FCA1900F67E1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAF5F892C554E9B0033482C /* PizzaShopViewController.swift in Sources */,
+				DA3BD05F2C2FDD2300F67E1F /* PizzaViewController.swift in Sources */,
+				DA3BD03E2C2FCA1900F67E1F /* AppDelegate.swift in Sources */,
+				DA3BD0552C2FD77500F67E1F /* PizzaListViewModel.swift in Sources */,
+				DA3BD0582C2FD7E500F67E1F /* Pizza.swift in Sources */,
+				DA3BD06E2C2FEDEE00F67E1F /* PizzaShopListViewModel.swift in Sources */,
+				DA3BD0642C2FDF2E00F67E1F /* PizzaGeneratorViewController.swift in Sources */,
+				DAAF5F8B2C55509F0033482C /* PizzaShopViewModel.swift in Sources */,
+				DA3BD0682C2FE12100F67E1F /* CustomPizzaListTableViewController.swift in Sources */,
+				DA3BD06A2C2FEC6B00F67E1F /* Extensions.swift in Sources */,
+				DA3BD05A2C2FD7EE00F67E1F /* PizzaShop.swift in Sources */,
+				DA3BD0402C2FCA1900F67E1F /* SceneDelegate.swift in Sources */,
+				DA3BD0662C2FDF9B00F67E1F /* NavigationTabBarController.swift in Sources */,
+				DAAF5F552C52F77C0033482C /* CustomPizzaListModel.swift in Sources */,
+				DA3BD05C2C2FDA9200F67E1F /* PizzaListTableViewController.swift in Sources */,
+				DA3BD06C2C2FEDC700F67E1F /* PizzaShopListTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA3BD0432C2FCA1900F67E1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA3BD0442C2FCA1900F67E1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA3BD0482C2FCA1B00F67E1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA3BD0492C2FCA1B00F67E1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA3BD04C2C2FCA1B00F67E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA3BD04D2C2FCA1B00F67E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA3BD04F2C2FCA1B00F67E1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4WJX92484;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaShop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-lab.PizzaShop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DA3BD0502C2FCA1B00F67E1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4WJX92484;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PizzaShop/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-lab.PizzaShop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA3BD0352C2FCA1900F67E1F /* Build configuration list for PBXProject "PizzaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3BD04C2C2FCA1B00F67E1F /* Debug */,
+				DA3BD04D2C2FCA1B00F67E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA3BD04E2C2FCA1B00F67E1F /* Build configuration list for PBXNativeTarget "PizzaShop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA3BD04F2C2FCA1B00F67E1F /* Debug */,
+				DA3BD0502C2FCA1B00F67E1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DAAF5F8F2C5568E50033482C /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAAF5F902C5568E50033482C /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DAAF5F8F2C5568E50033482C /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = DA3BD0322C2FCA1900F67E1F /* Project object */;
+}
