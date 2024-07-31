@@ -19,11 +19,12 @@ class PokemonDetailViewController: UIViewController {
     
     @objc func toggleFavorite(tapGestureRecognizer: UITapGestureRecognizer) {
         starImageView.isHighlighted = !starImageView.isHighlighted
-        starImageView.isHighlighted ? pokemonModel.addToFavorites(pokemon: pokemon) : pokemonModel.removeFromFavorites(pokemon: pokemon)
+        starImageView.isHighlighted ? pokemonListModel.addToFavorites(pokemon: pokemon) : pokemonListModel.removeFromFavorites(pokemon: pokemon)
     }
     
     var chainedPokemons = [Pokemon]()
-    let pokemonModel = PokemonModel.standard
+    let pokemonListModel = PokemonListModel.standard
+    var pokemonDetailModel: PokemonDetailModel!
     public var pokemon: Pokemon!
 
     override func viewDidLoad() {
@@ -33,15 +34,32 @@ class PokemonDetailViewController: UIViewController {
             fatalError("Pokemon no encontrado!")
         }
         
+        self.pokemonDetailModel = PokemonDetailModel(pokemon: pokemon)
+        self.pokemonDetailModel.delegate = self
+        self.pokemonDescription.textAlignment = .justified
         fetchPokemonImage(url: pokemon.image)
-        chainedPokemons = pokemonModel.getPokemonEvolutionChainDetail(pokemon)
-        chainedTableView.dataSource = self
-        chainedTableView.delegate = self
+        
         initializeFavoriteIcon(pokemon: pokemon)
         initializeFavoriteIconGestureRecognizer()
         name.text = pokemon.name
-        number.text = "#\(pokemon.number)"
-        pokemonDescription.text = pokemon.pokedexInfo
+        number.text = "# \(pokemon.number)"
+        
+        
+        self.pokemonDetailModel.getDescription { [weak self] (error, pokedexInfo) in
+            DispatchQueue.main.async {
+                if let error {
+                    let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                    alertController.addAction(.init(title: "OK", style: .default))
+                    self?.present(alertController, animated: true)
+                    return
+                }
+    
+                
+                self?.pokemonDescription.text = pokedexInfo
+            }
+        }
+        
+        
     }
     
     private func initializeFavoriteIconGestureRecognizer() {
@@ -54,15 +72,18 @@ class PokemonDetailViewController: UIViewController {
     
     private func fetchPokemonImage(url: String) {
         Task { [weak imageView] in
-                let (data, _) = try await URLSession.shared.data(from: URL(string: url)!)
-                imageView?.image = UIImage(data: data)
+            guard let pokemonURL = URL(string: url) else {
+                return print("Unable to fetch pokemon image. URL is empty")
+            }
+            let (data, _) = try await URLSession.shared.data(from: pokemonURL)
+            imageView?.image = UIImage(data: data)
         }
     }
     
     private func initializeFavoriteIcon(pokemon: Pokemon) {
         starImageView.image = UIImage(systemName: "star")
         starImageView.highlightedImage = UIImage(systemName: "star.fill")
-        starImageView.isHighlighted = pokemonModel.isFavorite(pokemon: pokemon)
+        starImageView.isHighlighted = pokemonListModel.isFavorite(pokemon: pokemon)
     }
 }
 
@@ -91,5 +112,31 @@ extension PokemonDetailViewController: UITableViewDelegate {
         pokemonViewController.pokemon = self.chainedPokemons[indexPath.row]
         
         navigationController?.pushViewController(pokemonViewController, animated: true)
+    }
+}
+
+// Evolution chain
+extension PokemonDetailViewController: PokemonDetailModelDelegate {
+    func getPokemonChainFrom(endpoint: EndpointProtocol) {
+        RequestHandler().get(endpoint) { (result: Result<EvolutionChainDTO, Error>) in
+            switch result {
+            case .failure(let failure):
+                print(failure)
+            case .success(let response):
+                print("All good in evolution chain")
+                self.pokemon.evolutionChain = [
+                    response.chain.species.name,
+                    response.chain.evolvesTo[0].species.name,
+                    response.chain.evolvesTo[0].evolvesTo[0].species.name
+                ]
+                
+                self.chainedPokemons = self.pokemonListModel.getPokemonEvolutionChainDetail(self.pokemon)
+                DispatchQueue.main.async {
+                    self.chainedTableView.dataSource = self
+                    self.chainedTableView.delegate = self
+                    
+                }
+            }
+        }
     }
 }

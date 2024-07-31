@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header-mini" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-TI-ksB">
-                                <rect key="frame" x="0.0" y="83" width="411" height="80"/>
+                                <rect key="frame" x="0.0" y="83" width="393" height="80"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZHZ-Hx-o4A">
                                 <rect key="frame" x="0.0" y="179" width="393" height="590"/>
@@ -43,7 +43,7 @@
                         <constraints>
                             <constraint firstItem="afU-xf-T3s" firstAttribute="trailing" secondItem="ZHZ-Hx-o4A" secondAttribute="trailing" id="1MC-dD-xcS"/>
                             <constraint firstItem="afU-xf-T3s" firstAttribute="bottom" secondItem="ZHZ-Hx-o4A" secondAttribute="bottom" id="2kt-lI-RVT"/>
-                            <constraint firstItem="7yX-TI-ksB" firstAttribute="trailing" secondItem="afU-xf-T3s" secondAttribute="trailing" constant="18" id="YZz-rw-UJC"/>
+                            <constraint firstItem="7yX-TI-ksB" firstAttribute="trailing" secondItem="afU-xf-T3s" secondAttribute="trailing" id="YZz-rw-UJC"/>
                             <constraint firstItem="ZHZ-Hx-o4A" firstAttribute="leading" secondItem="afU-xf-T3s" secondAttribute="leading" id="dDc-y0-ZPW"/>
                             <constraint firstItem="ZHZ-Hx-o4A" firstAttribute="top" secondItem="7yX-TI-ksB" secondAttribute="bottom" constant="16" id="nRu-bl-bV7"/>
                             <constraint firstItem="7yX-TI-ksB" firstAttribute="leading" secondItem="afU-xf-T3s" secondAttribute="leading" id="sz6-b4-N5z"/>
@@ -124,7 +124,7 @@
         <scene sceneID="xLn-4G-URA">
             <objects>
                 <tabBarController id="cBl-7a-WZg" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rHr-4C-PHe">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="pencil.line" catalog="system" id="rHr-4C-PHe">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,7 +173,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cax-tS-zeA">
-                                <rect key="frame" x="20" y="219" width="353" height="56"/>
+                                <rect key="frame" x="19.666666666666657" y="218.66666666666666" width="353.66666666666674" height="55.999999999999972"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="514-Cx-2Me" id="FM7-gX-fRi"/>
@@ -187,7 +187,7 @@
                                 <rect key="frame" x="0.0" y="92.999999999999986" width="393" height="238.66666666666663"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poke-header3" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9s-ZB-mXf">
-                                <rect key="frame" x="-7.6666666666666572" y="-153" width="408.33333333333326" height="246"/>
+                                <rect key="frame" x="0.0" y="-153" width="393" height="246"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bh8-Gm-PSc">
                                 <rect key="frame" x="0.0" y="313" width="393" height="456"/>
@@ -206,10 +206,12 @@
                             <constraint firstItem="vOz-vr-ebV" firstAttribute="top" secondItem="Ab5-af-Thw" secondAttribute="bottom" constant="-32" id="Rs0-83-OUY"/>
                             <constraint firstItem="vOz-vr-ebV" firstAttribute="height" secondItem="KHb-jr-nbW" secondAttribute="height" multiplier="0.02" id="RvZ-if-u6e"/>
                             <constraint firstItem="Ab5-af-Thw" firstAttribute="height" secondItem="K7i-KM-cNL" secondAttribute="height" multiplier="0.28" id="SY8-ta-84A"/>
+                            <constraint firstAttribute="trailing" secondItem="T9s-ZB-mXf" secondAttribute="trailing" id="Zes-Gq-u65"/>
                             <constraint firstItem="cax-tS-zeA" firstAttribute="width" secondItem="KHb-jr-nbW" secondAttribute="width" multiplier="0.9" id="d7D-ro-Fhs"/>
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="trailing" secondItem="Bh8-Gm-PSc" secondAttribute="trailing" id="hSg-Nl-oNc"/>
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="top" secondItem="T9s-ZB-mXf" secondAttribute="top" constant="256" id="ipP-7d-6jI"/>
                             <constraint firstItem="vOz-vr-ebV" firstAttribute="width" secondItem="KHb-jr-nbW" secondAttribute="width" id="mgB-8E-Dgf"/>
+                            <constraint firstItem="T9s-ZB-mXf" firstAttribute="leading" secondItem="K7i-KM-cNL" secondAttribute="leading" id="oEd-d5-8Ga"/>
                             <constraint firstItem="Bh8-Gm-PSc" firstAttribute="bottom" secondItem="KHb-jr-nbW" secondAttribute="bottom" id="pBc-5n-oEA"/>
                             <constraint firstItem="Bh8-Gm-PSc" firstAttribute="leading" secondItem="KHb-jr-nbW" secondAttribute="leading" id="sM6-I6-zCQ"/>
                             <constraint firstItem="KHb-jr-nbW" firstAttribute="top" secondItem="Ab5-af-Thw" secondAttribute="top" constant="10" id="sOA-Le-T6e"/>
@@ -269,6 +271,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil.line" catalog="system" width="128" height="117"/>
         <image name="poke-header-mini" width="411" height="80"/>
         <image name="poke-header3" width="408" height="246"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>

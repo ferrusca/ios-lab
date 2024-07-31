@@ -14,12 +14,12 @@ class PokemonTypeDetailViewController: UIViewController {
     public var pokemonType: PokemonTypeDamage!
     
     let sections = [
-    "Double damage dealt",
-       "Double damage received",
-       "Half damage dealt",
-       "Half damage received",
-       "Not affected by",
-       "No effect against",
+        "Double damage dealt",
+        "Double damage received",
+        "Half damage dealt",
+        "Half damage received",
+        "Not affected by",
+        "No effect against",
     ]
 
     override func viewDidLoad() {
@@ -51,22 +51,27 @@ extension PokemonTypeDetailViewController: UITableViewDataSource {
             ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
         
         var cellContent = cell.defaultContentConfiguration()
+        var pokemonInterestedTypes: [PokemonType] = []
         
-        if indexPath.section == 0 {
-            cellContent.text = pokemonType.doubleDamageDealt.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
-        } else if indexPath.section == 1 {
-            cellContent.text = pokemonType.doubleDamageReceived.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
-        } else if indexPath.section == 2 {
-            cellContent.text = pokemonType.halfDamageDealt.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
-        } else if indexPath.section == 3 {
-            cellContent.text = pokemonType.halfDamageReceived.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
-        } else if indexPath.section == 4 {
-            cellContent.text = pokemonType.notAffectedBy.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
-        } else if indexPath.section == 5 {
-            cellContent.text = pokemonType.noAffectedAgainst.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
+        switch indexPath.section {
+        case 0:
+            pokemonInterestedTypes = pokemonType.doubleDamageDealt
+        case 1:
+            pokemonInterestedTypes = pokemonType.doubleDamageReceived
+        case 2:
+            pokemonInterestedTypes = pokemonType.halfDamageDealt
+        case 3:
+            pokemonInterestedTypes = pokemonType.halfDamageReceived
+        case 4:
+            pokemonInterestedTypes = pokemonType.notAffectedBy
+        case 5:
+            pokemonInterestedTypes = pokemonType.noAffectedAgainst
+        default:
+            fatalError("Case in pokemon types not found")
         }
-        cell.contentConfiguration = cellContent
+        cellContent.text = pokemonInterestedTypes.map({ pokemonType in pokemonType.rawValue }).joined(separator: ", ")
         
+        cell.contentConfiguration = cellContent
         return cell
     }
 }

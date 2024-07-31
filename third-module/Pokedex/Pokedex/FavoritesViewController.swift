@@ -13,7 +13,7 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var filteredPokemons = [Pokemon]()
     
-    let pokemonModel = PokemonModel.standard
+    let pokemonListModel = PokemonListModel.standard
     
     override func viewWillAppear(_ animated: Bool) {
         searchBar(searchBar, textDidChange: searchBar.text ?? "")
@@ -31,7 +31,7 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredPokemons = pokemonModel.getFavorites(searchText: searchText)
+        filteredPokemons = pokemonListModel.getFavorites(searchText: searchText)
         
         tableView.reloadData()
     }
@@ -43,7 +43,8 @@ extension FavoritesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", 
+                                                 for: indexPath)
         
         var cellContent = cell.defaultContentConfiguration()
         let pokemon = filteredPokemons[indexPath.row]

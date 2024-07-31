@@ -13,7 +13,7 @@ class PokemonsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     var filteredPokemons = [Pokemon]()
     
-    let pokemonModel = PokemonModel.standard
+    let pokemonModel = PokemonListModel.standard
     
     private func customizeSearchBar() {
         // customizing search bar appearance
@@ -38,7 +38,7 @@ class PokemonsViewController: UIViewController {
 
 extension PokemonsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        pokemonModel.getAllFromAPI(foo: 1) { [weak self] error in
+        pokemonModel.getAllFromAPI { [weak self] error in
             DispatchQueue.main.async {
                 if let error {
                     let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
