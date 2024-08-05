@@ -23,7 +23,7 @@ struct PokemonList: View {
         List(pokedex) { pokemon in
             PokemonRow(pokemon: pokemon)
         }
-        
+       
         
     }
 }

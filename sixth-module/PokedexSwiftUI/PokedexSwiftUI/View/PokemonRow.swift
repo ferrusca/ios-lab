@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PokemonRow: View {
+    @State private var isFavorite: Bool = false
     let pokemon: Pokemon
     
     private var imageURL: URL? {
@@ -35,10 +36,14 @@ struct PokemonRow: View {
             
             
             Text(pokemon.name)
-                .font(.title)
+                .font(.subheadline)
                 .fontWeight(.bold)
+                .foregroundColor(!isFavorite ? .black : .red)
             Spacer()
+            
+            FavoriteButton(isFavorite: $isFavorite)
         }
+        .buttonStyle(PlainButtonStyle())
         
     }
 }

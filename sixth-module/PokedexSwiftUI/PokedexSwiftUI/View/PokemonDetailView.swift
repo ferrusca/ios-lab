@@ -9,6 +9,9 @@ import SwiftUI
 import MapKit
 
 struct PokemonDetailView: View {
+    //  This var is a clousure type
+    @Environment(\.pokemonSoundAction) private var pokemonSoundAction
+    
     let pokemon: Pokemon
     
     private var coordinate: CLLocationCoordinate2D? {
@@ -49,6 +52,10 @@ struct PokemonDetailView: View {
                 Text("No.\(pokemon.number)")
                 Text(pokemon.type[0])
                 Spacer()
+            }
+            
+            Button("Play pokemon name") {
+                pokemonSoundAction()
             }
             
             Spacer()
